@@ -41,7 +41,18 @@
 #             i = not i
 #     return r
 #
-# print(f" 5.feladat: {big('minden páros nagybetűvel')}")
+# print(f" 5.feladat: {big('nagygyörgy tibor'):>18}")
+############ 5.b regex ##################################
+# import re
+#
+# def alternate_case(s):
+#     cap = [False]
+#     def repl(m):
+#         cap[0] = not cap[0]
+#         return m.group(0).upper() if cap[0] else m.group(0).lower()
+#     return re.sub(r'[a-zA-ZáéiíóöőúüűÁÉÍÓÖŐÚÜŰ]', repl, s)
+#
+# print(f" 5/b.feladat: {alternate_case('nagygyörgy tibor'):>14}")
 ########################################################################################################################
 ########################################################################################################################
 # 6. Generálj egy password-ot a felhasználó által megadott adatokból: név, cím, születési idő. A generált password-ben
