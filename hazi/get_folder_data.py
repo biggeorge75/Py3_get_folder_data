@@ -1,3 +1,7 @@
+'''
+Konzolos alkalmazás. Bekéri egy könyvtár útvonalát, majd kimenti a benne lévő fájlok adatait (name, size, date) *.txt + *.json + *.xlsx fájlokba.
+'''
+
 import os, openpyxl
 import time
 import json
