@@ -1,24 +1,26 @@
 import collections
 
-textfile = "aslan.txt"
+textfile = "hazi.txt"
 
 with open(textfile) as file:
-    mytext = str(file.read())
+    text = str(file.read())
 
-    if len(mytext) == 0:
+    if len(text) == 0:
         print("file is empty")
     else:
-        numWords = len(mytext.split(" "))
-        char = (len(mytext.replace(" ", "")))
+        numWords = len(text.split(" "))
+        char = (len(text.replace(" ", "")))
 
         wordLen = 3
-        mytext2 = mytext.replace("\n", " ")
-        listOfWords = [ word for word in mytext2.split(" ") if len(word)>wordLen]
-        listWordNumber = collections.Counter(listOfWords).most_common()
+        myText = text.replace("\n", " ")
+        listWords = [i for i in myText.split(" ") if len(i) > wordLen]
+        listWordNumber = collections.Counter(listWords).most_common()
 
-    summary = f'\nSzavak száma: {numWords} \nKarakterek száma: {char} \nA 3 leggyakoribb szó: {listWordNumber[0]}, {listWordNumber[1]}, {listWordNumber[2], }'
+    summary = f'Szavak száma: {numWords:>6} \nKarakterek száma: {char:>3} \nA 3 leggyakoribb szó: {listWordNumber[0][0]} ' \
+              f'({listWordNumber[0][1]}), {listWordNumber[1][0]} ({listWordNumber[1][1]}), {listWordNumber[2][0]} ({listWordNumber[2][1]})'
 
-    with open("summary.txt", "w") as f:
-        f.write(summary)
-
+    with open("summary.txt", "w") as file:
+        file.write(summary)
+print('_'*80)
 print(summary)
+print('_'*80)
