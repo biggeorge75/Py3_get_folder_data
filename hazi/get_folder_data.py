@@ -56,7 +56,7 @@ try:
             vdata['size:'] = file_size
             vdata['date:'] = file_date.strftime("%y/%m/%d %H:%M")
 
-            # betöltöm az adatokat a .xlsx-be
+            # betöltöm az adatokat az .xlsx-be
             sheet[f'A{index + 2}'] = file_name
             sheet[f'B{index + 2}'] = file_size
             sheet[f'C{index + 2}'] = file_date.strftime("%y/%m/%d %H:%M")
