@@ -79,7 +79,7 @@ def draw_data(data):
 
     plt.xticks(fontsize=9)
 
-    plt.title(title+" - Drágámnak\n")
+    plt.title(title+"\n")
     plt.legend()
     # plt.savefig(f'{title}.png')
     plt.show()
