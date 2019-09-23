@@ -57,7 +57,13 @@ def draw_data(data):
     :return: None
     """
 
-    plt.style.use("fivethirtyeight")
+    fig_size = plt.rcParams["figure.figsize"]
+
+    fig_size[0] = 16
+    fig_size[1] = 7
+    plt.rcParams["figure.figsize"] = fig_size
+
+    plt.style.use("seaborn-whitegrid")
 
     title = data["title"]
     day_list = data["days"]
@@ -65,15 +71,15 @@ def draw_data(data):
     minimums = data["mins"]
     maximums = data["maxes"]
 
-    plt.plot(day_list, minimums, color="#4965B0", marker="o", label="Minimums")
-    plt.plot(day_list, maximums, color="#C08731", marker="o", label="Maximums")
+    plt.plot(day_list, minimums, color="#3399FF", marker="o", label="Minimum")
+    plt.plot(day_list, maximums, color="#FF6666", marker="o", label="Maximum")
 
     ay = plt.gca().get_yaxis()
     ay.set_major_formatter(EngFormatter(unit="°C"))
 
-    plt.xticks(fontsize=10)
+    plt.xticks(fontsize=9)
 
-    plt.title(title)
+    plt.title(title+" - Drágámnak\n")
     plt.legend()
     # plt.savefig(f'{title}.png')
     plt.show()
