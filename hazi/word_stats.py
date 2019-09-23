@@ -1,3 +1,13 @@
+"""
+Ebben a feladatban egy olyan kódot kell írnod ami betölt egy tetszőleges .txt fájlt (mellékelek egyet) és készít egy statisztikát a szövegről amely tartalma:
+
+- Szavak száma
+- Karakterek száma szóköz nélkül
+- A három leggyakoribb szó (ignoráljuk a 3 betűs vagy rövidebb szavakat)
+
+A végeredményt mentse ki egy word_stats.txt fájlba és opcionálisan készülhet egy excel fájl is az eredeti fájl mellé.
+"""
+
 import collections
 
 textfile = "The Adventures of Sherlock Holmes.txt"
