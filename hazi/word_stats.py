@@ -12,7 +12,6 @@ with open(textfile) as file:
         char = (len(text.replace(" ", "")))
 
         wordLen = 3
-
         myText = text.replace("\n", " ")
         listWords = [i for i in myText.split(" ") if len(i) > wordLen]
         listWordNumber = collections.Counter(listWords).most_common(3)
@@ -22,7 +21,7 @@ with open(textfile) as file:
               f'({listWordNumber[0][1]}), {listWordNumber[1][0]} ({listWordNumber[1][1]}), ' \
               f'{listWordNumber[2][0]} ({listWordNumber[2][1]})'
 
-    with open("summary.txt", "w") as file:
+    with open("summary.txt", "w", encoding="UTF8") as file:
         file.write(summary)
 print('_'*80)
 print(summary)
