@@ -1,8 +1,10 @@
 import re
+
 import requests
 from bs4 import BeautifulSoup
 from matplotlib import pyplot as plt
 from matplotlib.ticker import EngFormatter
+
 
 def main(url):
     result = requests.get(url)
@@ -12,6 +14,7 @@ def main(url):
 
     data = get_data(result.content)
     draw_data(data)
+
 
 def get_data(source):
     """
@@ -49,6 +52,7 @@ def get_data(source):
         "maxes": temp_maxes
     }
 
+
 def draw_data(data):
     """
     Gets a dictionary and draws a plot fron it's data
@@ -83,5 +87,5 @@ def draw_data(data):
     # plt.savefig(f'{title}.png')
     plt.show()
 
+
 main('https://www.idokep.hu/30napos/Budapest')
-# main('https://www.idokep.hu/30napos/Gy%C5%91r')
