@@ -81,10 +81,54 @@
 ########################################################################################################################
 # # 8. Írj egy függvényt amely egy global változó értékét állítja át. Ha a változó False, akkor True és ellenkezőleg.
 
-
-
+# name = True
+# def init():
+#     global name
+#     if name == False:
+#         name = True
+#     else:
+#         name = False
+#     return name
+#
+# print(init())
 ##########################################  REKURZIÓ  ##################################################################
 ########################################################################################################################
+########################################################################################################################
+########################################################################################################################
+# # Írj egy rekurzív függvényt a fibonacci szekvencia szemléltetésére.
+
+# fibonacci_cache = {}
+# def recursive_fibonacci(n):
+#     if n in fibonacci_cache:
+#         return fibonacci_cache[n]
+#
+#     if n == 1:
+#         value = 1
+#     elif n == 2:
+#         value = 1
+#     elif n > 2:
+#         value = recursive_fibonacci(n-1) + recursive_fibonacci(n-2)
+#
+#     fibonacci_cache[n] = value
+#     return value
+#
+# for i in range(1, 1001):
+#    print(i,':',recursive_fibonacci(i))
+
+########## 2. megoldás ###############
+# from functools import lru_cache
+#
+# @lru_cache(maxsize=1000)
+# def recursive_fibonacci(n):
+#     if n == 1:
+#         return 1
+#     elif n == 2:
+#         return 1
+#     elif n > 2:
+#         return recursive_fibonacci(n-1) + recursive_fibonacci(n-2)
+#
+# for i in range(1, 1001):
+#    print(i,':',recursive_fibonacci(i))
 ########################################################################################################################
 ########################################################################################################################
 # #
