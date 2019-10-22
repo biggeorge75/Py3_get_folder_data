@@ -43,6 +43,8 @@
 ########################################################################################################################
 ########################################################################################################################
 # # 5. Írj egy függvényt amely megvizsgálja, hogy egy szó palindrom vagy sem. Pl. madam >>> True
+# Lehet, hogy érdemes lenne akár mondatokat is vizsgálni. word.replace(" ", "") Ezt még be kell szúrni, hogy a spacékat ne vegye figyelembe. 
+# A példamondat: indul a görög aludni
 
 # def palindrom(word):
 #     if word == word[::-1]:
